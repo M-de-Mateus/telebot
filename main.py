@@ -44,7 +44,7 @@ async def anime_search(pesquisa):
     return itens
 
 
-chave_api = '5358034494:AAHTw8hu0aNBktOBKjy3oGCzJLdTApFBLTE'
+chave_api = 'Sua chave API'
 bot = tb.TeleBot(chave_api)
 
 
