@@ -19,12 +19,12 @@ Zeta possui vários comandos que podem ser usados no chat do telegram, eles est�
 
 Decidi criar algumas funções legais para o Zeta, a primeira delas era a de procurar imagens e depois retorná-las para o chat do telegram.
 
-Para isso utilizei o Selenium para pesquisar imagens no google. O código acessa a página do google passando o termo da pesquisa por url, após isso ele percorre os containers da página e baixa 10 imagens (valor ajustável) para meu computador, as armazenando na pasta 'image'. Antes de baixar cada imagem o Zeta espera 10 segundos para que ela carregue na sua máxima resolução, caso esse tempo acabe o Zeta ignora a imagem e passa para a próxima. Após isso, o Zeta sorteia uma imgem aleatória dentre as 10 que pesquisou e a retorna no chat respondendo o usuário que deu o comando. Por fim, ele exclui as imagens para que não pesem no meu computador.
+Para isso utilizei o Selenium para pesquisar imagens no google. O código acessa a página do google passando o termo da pesquisa por url, após isso ele percorre os containers da página e baixa 10 imagens (valor ajustável) para meu computador, as armazenando na pasta 'image'. Antes de baixar cada imagem o Zeta espera 10 segundos para que ela carregue na sua máxima resolução, caso esse tempo acabe o Zeta ignora a imagem e passa para a próxima. Após isso, o Zeta sorteia uma imgem aleatória dentre as 10 que pesquisou e a retorna no chat respondendo o usuário que deu o comando. Por fim, ele exclui as imagens para que não pesem no meu computador. Além de Selenium, também utilizo as bibliotecas bs4 e requests.
 
 ### /anime _1_ ([imagesearch](botfunc/imagemsearch.py))
 
 Esse comando foi escrito em duas partes. Ele retorna a imagem de um anime pesquisado juntamente com o Título, Tipo (anime ou OVA), Popularidade e Sinopse do anime.
-A primeira parte do comando é responsável por pegar a imagem da pesquisa do site [Kitsu](https://kitsu.io/anime)
+A primeira parte do comando é responsável por pegar a imagem da pesquisa do site [Kitsu](https://kitsu.io/anime). Para isso utilizo a biblioteca bs4 e a requests. 
 
 ### /clima ([Clima](botfunc/clima.py))
 
