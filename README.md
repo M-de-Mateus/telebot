@@ -15,6 +15,10 @@ Zeta possui vários comandos que podem ser usados no chat do telegram, eles est�
 
 ## Funções
 
+### /comandos
+
+Lê um arquivo .txt e envia uma mensagem que contem todos os comandos listados do bot.
+
 ### /pesquisa ([imagesearch](botfunc/imagemsearch.py))
 
 Decidi criar algumas funções legais para o Zeta, a primeira delas era a de procurar imagens e depois retorná-las para o chat do telegram.
@@ -42,9 +46,9 @@ Aqui temos mais um pouco de web scraping. Utilizo o `selenium` e o `bs4` para pe
 
 ## Comando Genéricos ([Comandos](botfunc/comandos.py))
 
-Apesar da complexidade de algumas funções citadas acima, a criação dos **Comandos genéricos** foi a mais legal para mim. Esses comandos abrem a possibilidade do usuário criar seu próprio comando que tem como resposta um texto simples ou um texto com variáveis.
+Apesar da complexidade de algumas funções citadas acima, a criação dos **Comandos genéricos** foi a mais legal para mim. Esses comandos abrem a possibilidade do usuário criar seu próprio comando que tem como resposta um texto simples ou um texto com variáveis. O bot que vi no whatsapp tinha essa função, foi a parte mais legal para mim e para todos os meus amigos. Consegui recriar essa função com algumas melhorias.
 
-### Criando comandos (/cmdadd)
+### Criando comandos genéricos (/cmdadd)
 
 O primeiro desafio era armazenar os comandos criados, como não pretendia levar esse bot muito a frente não criei um banco de dados para ele, então usei arquivos .txt para essa função.
 
@@ -53,3 +57,50 @@ Para chamar um comando primeiramente tenho que definir um decorator e passar o p
 ```
 @bot.message_handler(commands=['cmdadd'])
 ```
+
+Todo arquivo .txt de comando criado é nomeado com o ID do chat e nome do comando, assim evitando que outros chats diferentes possam acessar o comando. Como pode ser observado na pasta [Generic](generic).
+
+*Ocultei o ID do chat por motivos de segurança*
+
+*Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário cria seu comando.*
+
+### Chamando o comando genérico (!nomedocomando)
+
+O decorator nos permite passar como parâmetro uma função personalizada para a chamada dos comandos. No Whatsapp os comandos eram chamados por uma '!' no começo da palavra. No telegram a '/' faz essa função. Apesar disso, como forma de diferenciar os comandos genéricos dos principais, optei por utilizar '!' ao invés da '/' para chamar o comando. Para isso utilizei uma `lambda` com uma função que verificava se na primeira posição do texto de cada mensagem havia uma '!':
+
+```
+@bot.message_handler(func=lambda mensagem: True if mensagem.text[0] == '!' else False)
+```
+
+Com isso o usuário poderia chamar o comando apenas com uma '!' + nomedocomando.
+
+### Adicionando respostas ao comando genérico (/cmdaddres)
+
+Outra função bastante interessante era a de adicionar várias respostas possíveis para o mesmo comando, quando há mais de uma resposta o Zeta escolhe uma aleatoriamente e a envia para o usuário, o que pode render jogos bem engraçados. Não há limite de respostas para serem adicionadas, todas as respostas são armazenadas no arquivo .txt, toda vez que uma resposta é adicionada o Zeta abre o arquivo, adiciona as respostas já existentes a uma lista, depois adiciona a nova resposta na mesma lista e escreve novamente o arquivo. O que preserva as respostas antigas e adiciona a nova.
+
+*Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário adiciona uma resposta nova ao seu comando genérico.*
+
+
+### Listando respostas do comando genéricos (/listares)
+
+Uma melhoria em relação ao bot no qual me inspirei. Os usuários não sabiam quais respostas tinham em cada comando, o que pode ser legal, mas para os criadores dos comandos (quem o desenvolvedor permitir que crie) pode ser uma opção interessante. O comando /listares lista todas as respostas e seus index atuais dentro de um comando genérico.
+
+*Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário lista as respostas do comando genérico.*
+
+### Removendo comandos genéricos (/cmdremove)
+
+*Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário remove um comando genérico.*
+
+### Removendo respostas de um comando genérico (/cmddelres)
+
+Esse comando remove uma respostas dentro de um comando genérico, para isso o usuário precisará do index da resposta que pode ser obtido pelo comando `/listares`.
+O comando deve ter ao menos uma resposta.
+
+*Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário remove uma resposta do comando genérico.*
+
+### Listando comandos genéricos (/lista)
+
+*Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário lista os comandos genéricos presentes no chat.*
+
+
+
