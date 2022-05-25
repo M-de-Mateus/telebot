@@ -7,7 +7,7 @@ from time import sleep
 
 class Insta:
     def __init__(self):
-        self.chromePath = r'C:\Users\Mateu\Desktop\pastas\telebot\driver\chromedriver.exe'
+        self.chromePath = r'chromedriver.exe'
 
     def pesquisar(self, pesquisa):
         options = webdriver.ChromeOptions()
