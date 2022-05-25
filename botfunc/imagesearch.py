@@ -38,7 +38,7 @@ class Gimage:
 
     def __init__(self):
         self.folder_name = Gimage.criar_pasta()
-        self.chromePath = r'C:\Users\Mateu\Desktop\pastas\telebot\driver\chromedriver.exe'
+        self.chromePath = r'chromedriver.exe'
 
     # indica a pasta para o salvamento das imagens e o nome com o qual elas serão salvas
     def download_image(self, url, num, pesquisa):
