@@ -1,0 +1,69 @@
+Principais 🏆
+
+/clima + local (cidade, estado, municipio ou bairro)
+Retorna a temperatura atual, a temperatura máxima e minima, tempo e umidade do ar.
+
+/pesquisa + termo da pesquisa
+Retorna uma imagem correspondente ao termo pesquisado (para resultados melhores substitua os espaços do termo de pesquisa por '+'. Ex.: 'Carros+muito+rápidos, noite+estrelada etc. Ainda sim, não haverá erro caso o termo pesquisado possua espaços. Ex.: Carros muito rápidos, Noite estrelada etc)
+
+/amigo
+O Zeta geralmente gosta de todo mundo
+
+/roleta (apenas em grupos, supergrupos ou canais)
+Só usa se tiver coragem
+
+/insta + termo da pesquisa
+Gera hashtags para usar no instagram, não é necessário inserir a # no termo de pesquisa
+
+/anime + nome do anime
+Retorna a foto, o nome, o tipo de mídia, popularidade e a sinopse do anime (em inglês)
+
+Comandos genéricos: Crie o seu comando! 🥳
+
+Você pode criar um comando personalizado e adicionar respostas a ele, vamos aprender?
+
+Atenção ⚠️
+
+O nome do comando não deve ter espaço, mas pode haver um separador entre as palavras
+O nome do comando deve começar com '!'
+
+!nomedocomando ✅
+!nome-do-comando ✅
+!nome do comando ❌
+!nomedocomando!?#<>❌
+
+/cmdadd !nomedocomando Sua resposta
+Adiciona um comando com nome e resposta personalizada
+
+/lista
+Lista os comandos genéricos criados no chat
+
+/cmdaddres !nomedocomando Sua resposta
+Adiciona uma resposta a um comando JÁ EXISTENTE
+
+Obs: No caso de um comando ter mais de uma resposta ele retornará uma resposta aleatória sempre que for chamado
+
+!nomedocomando
+Chama um comando existente
+
+Obs: O Zeta é case sensitive. (diferencia letras maiúsculas de minúsculas)
+
+/listares + !nomedocomando
+Lista toda as respostas de um comando genérico com seu index atual
+
+/cmddelres + !nomedocomando + index da resposta
+Remove a resposta indicada do comando genérico
+
+/cmdremove !nomedocomando
+Remove um comando existente
+
+Variáveis especiais:
+
+Ao adicioná-las a sua resposta elas geram conteúdo dinâmico:
+
+{smallRandom} - Retorna um valor aleatório entre 0 e 10
+{mediumRandom} - Retorna um valor aleatório entre 11 e 100
+{largeRandom} - Retorna um valor aleatório entre 101 e 1000
+{nomeAutor} - Retorna seu primeiro nome na resposta
+
+
