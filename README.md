@@ -32,7 +32,7 @@ _Uma possível melhora no desempenho dessa função seria fazer ela escolher ran
 Esse comando foi escrito em duas partes. Ele retorna a imagem de um anime pesquisado juntamente com o Título, Tipo (anime ou OVA), Popularidade e Sinopse do anime.
 A primeira parte do comando é responsável por pegar a imagem da pesquisa do site [Kitsu](https://kitsu.io/anime). Para isso utilizo as bibliotecas `bs4` e a `requests`.
 
-### /anime _2_ ([Main]((main.py))
+### /anime _2_ ([Main](main.py))
 
 A segunda parte da função está no meu arquivo main. Para retornar as informações necessárias sobre o anime pesquisado utilizei uma API assíncrona chamada `kitsu.py`, desenvolvida pelo site de onde retiro a imagem do anime. Como não tenho muita experiência nesse tipo de programação, acabei não tendo sucesso em criar uma classe que trabalhasse fora do meu código principal, então escrevi essa função no começo do arquivo. Também não encontrei muitas informações para essa API. Ela retorna um objeto em JSON de onde extraio o Título, Tipo (anime ou OVA), Popularidade e Sinopse do anime.
 
@@ -69,8 +69,10 @@ Todo arquivo .txt de comando criado é nomeado com o ID do chat e nome do comand
 Essas variáveis são palavras entre {} que são substitituidas por outros valores sempre que o usuário chamar o comando.
 Por exemplo, se um usuário criar um comando com a variável {smallRandom}, sempre que esse comando for chamado essa variácel será substítuida por um número entre 0 e 10:
 
+```
 Comando -> A estrada tem {smallRandom} km!
 Retorno -> A estrada tem 4 km!
+```
 
 *O usuário pode usar mais de uma variável por comando/resposta. A função de chamar o comando conta com um `while` que só para quando substitui todas as variáveis especiais*
 
