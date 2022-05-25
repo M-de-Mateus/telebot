@@ -4,7 +4,7 @@ import requests
 class Clima:
     def __init__(self):
         self.cidade = None
-        self.api = '4b5b1a068b63ceec631107103c043cd4'
+        self.api = 'Sua chave API'
         self.link = None
 
     # retorna a temperatura do local especificado
