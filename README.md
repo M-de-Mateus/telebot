@@ -64,6 +64,18 @@ Todo arquivo .txt de comando criado é nomeado com o ID do chat e nome do comand
 
 *Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário cria seu comando.*
 
+### Criando comandos genéricos (Variáveis especiais)
+
+Essas variáveis são palavras entre {} que são substitituidas por outros valores sempre que o usuário chamar o comando.
+Por exemplo, se um usuário criar um comando com a variável {smallRandom}, sempre que esse comando for chamado essa variácel será substítuida por um número entre 0 e 10:
+
+Comando -> A estrada tem {smallRandom} km!
+Retorno -> A estrada tem 4 km!
+
+*O usuário pode usar mais de uma variável por comando/resposta. A função de chamar o comando conta com um `while` que só para quando substitui todas as variáveis especiais*
+
+Para mais variáveis especiais acesse o documento [Comandos](botfunc/comandosgerais.txt)
+
 ### Chamando o comando genérico (!nomedocomando)
 
 O decorator nos permite passar como parâmetro uma função personalizada para a chamada dos comandos. No Whatsapp os comandos eram chamados por uma '!' no começo da palavra. No telegram a '/' faz essa função. Apesar disso, como forma de diferenciar os comandos genéricos dos principais, optei por utilizar '!' ao invés da '/' para chamar o comando. Para isso utilizei uma `lambda` com uma função que verificava se na primeira posição do texto de cada mensagem havia uma '!':
@@ -101,6 +113,3 @@ O comando deve ter ao menos uma resposta.
 ### Listando comandos genéricos (/lista)
 
 *Ao chamar esse comando e seguir as instruções presentes no arquivo [Comandos](botfunc/comandosgerais.txt) o usuário lista os comandos genéricos presentes no chat.*
-
-
-
