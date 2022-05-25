@@ -12,10 +12,10 @@ _Embora alguns códigos sejam citados, o objetivo desse README.md não é o de e
 
 ## Sumário:
 
-**1. [Comandos](https://github.com/M-de-Mateus/telebot#comandos)**
-**2. [Funções](https://github.com/M-de-Mateus/telebot#funcoes)**
-	**-[/comandos](https://github.com/M-de-Mateus/telebot#comandos-1)**
- **-
+**1. [Comandos](https://github.com/M-de-Mateus/telebot#comandos)**<br />
+**2. [Funções](https://github.com/M-de-Mateus/telebot#funcoes)**<br />
+	**-[/comandos](https://github.com/M-de-Mateus/telebot#comandos-1)**<br />
+	**-
 
 ## Comandos
 
