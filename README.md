@@ -1,2 +1,2 @@
-# telebot
+# telebot 1.0
  
