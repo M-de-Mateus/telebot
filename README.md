@@ -13,9 +13,23 @@ _Embora alguns códigos sejam citados, o objetivo desse README.md não é o de e
 ## Sumário:
 
 **1. [Comandos](https://github.com/M-de-Mateus/telebot#comandos)**<br />
-**2. [Funções](https://github.com/M-de-Mateus/telebot#funcoes)**<br />
-	**-[/comandos](https://github.com/M-de-Mateus/telebot#comandos-1)**<br />
-	**-
+
+**2. [Funções](https://github.com/M-de-Mateus/telebot#funções)**
+  - [/comandos](https://github.com/M-de-Mateus/telebot#comandos-1)
+  - [/pesquisa](https://github.com/M-de-Mateus/telebot#pesquisa-imagesearch)
+  - [/anime](https://github.com/M-de-Mateus/telebot#anime-1-imagesearch)
+  - [/clima](https://github.com/M-de-Mateus/telebot#clima-clima)
+  - [/insta](https://github.com/M-de-Mateus/telebot#insta-insta)<br />
+
+**3. [Comandos Genéricos](https://github.com/M-de-Mateus/telebot#comando-gen%C3%A9ricos-comandos)**
+  - [Criando comandos genéricos](https://github.com/M-de-Mateus/telebot#criando-comandos-gen%C3%A9ricos-cmdadd)
+    - [Varáveis especiais](https://github.com/M-de-Mateus/telebot#criando-comandos-gen%C3%A9ricos-vari%C3%A1veis-especiais)
+  - [Chamando o comando genérico](https://github.com/M-de-Mateus/telebot#chamando-o-comando-gen%C3%A9rico-nomedocomando)
+  - [Adicionando respostas ao comando genérico](https://github.com/M-de-Mateus/telebot#adicionando-respostas-ao-comando-gen%C3%A9rico-cmdaddres)
+  - [Listando respostas do comando genéricos](https://github.com/M-de-Mateus/telebot#listando-respostas-do-comando-gen%C3%A9ricos-listares)
+  - [Removendo comandos genéricos](https://github.com/M-de-Mateus/telebot#removendo-comandos-gen%C3%A9ricos-cmdremove)
+  - [Removendo respostas de um comando genérico](https://github.com/M-de-Mateus/telebot#removendo-respostas-de-um-comando-gen%C3%A9rico-cmddelres)
+  - [Listando comandos genéricos](https://github.com/M-de-Mateus/telebot#listando-comandos-gen%C3%A9ricos-lista)
 
 ## Comandos
 
