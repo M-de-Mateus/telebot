@@ -56,10 +56,6 @@ class Gimage:
         search_URL = f"https://www.google.com/search?q={pesquisa}&source=lnms&tbm=isch"
         driver.get(search_URL)
 
-        # rola a página pra cima
-        # opicional
-        # driver.execute_script("window.scrollTo(0, 0);")
-
         # identifica os containers onde estão as imagens
         page_html = driver.page_source
         pageSoup = bs4.BeautifulSoup(page_html, 'html.parser')
@@ -82,9 +78,6 @@ class Gimage:
                 previewImageURL = previewImageElement.get_attribute("src")
                 # clica na imagem para abri-la, para acessar o link que não esta encripitado pelo google
                 driver.find_element(by=By.XPATH, value=xPath).click()
-
-                # opicional (deixa a execução mais lenta)
-                # time.sleep(3)
 
                 # determina o horário em que a execução do download começou
                 timeStarted = time.time()
@@ -112,7 +105,6 @@ class Gimage:
         options = Options()
         options.add_argument('--headless')
         options.add_argument('start-maximized')
-        # options.add_argument('--window-size=1115,625')
         drive = webdriver.Chrome(executable_path=self.chromePath, options=options)
         drive.get(f'https://kitsu.io/anime?text={pesquisa}')
         time.sleep(5)
