@@ -10,10 +10,10 @@ Zeta foi inspirado em um bot que vi no whatsapp uma vez, era desenvolvido basead
 _Embora alguns códigos sejam citados, o objetivo desse README.md não é o de ensinar a utilizar a API do Telegram._
 
 
-##Sumário:
+## Sumário:
 
-**1. [Comandos](https://github.com/M-de-Mateus/telebot#comandos)**
-**2. [Funções](https://github.com/M-de-Mateus/telebot#funcoes)**
+** 1. [Comandos](https://github.com/M-de-Mateus/telebot#comandos) **
+** 2. [Funções](https://github.com/M-de-Mateus/telebot#funcoes) **
 
 ## Comandos
 
